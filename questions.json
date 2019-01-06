@@ -1,0 +1,112 @@
+[
+    {
+        "question": "Explain closures",
+        "answer": "A closure is an inner function that has access to an outer function's variables as well as global variables. The inner function also has access to the outer functions parameters.  A closure is created by including a function inside another function.",
+        "cat": "JS"
+    },
+    {
+        "question": "What is the difference between var, let, and const?",
+        "answer": "Var is function scoped and let is block scoped. JS treats all variables as if they are declared (but not assigned!) at the top of a functional scope no matter where they are actually declared. This is variable hoisting. ES6 introduced block-level scoping which gives you more control over a variable's lifecycle. Variables declared using const cannot be re-assigned and therefore must be assigned when they are declared.",
+        "cat": "JS"
+    },
+    {
+        "question": "What is an Action hook in WordPress?",
+        "answer": "A hook that is triggered at a specific time when WordPress is running and lets you take an action. An example is sending a tweet when a post is published.",
+        "cat": "WP"
+    },
+    {
+        "question": "What is a Filter hook in WordPress?",
+        "answer": "A hook that allows you to get and modify WordPress data before it is sent to the database or the browser. Examples are customizing how excerpts are displayed or adding custom code to the end of a post.",
+        "cat": "WP"
+    },
+    {
+        "question": "What is CSS specificity and how does it work?",
+        "answer": "The browser determined what styles to show based on the specificity of CSS rules. The specificity is caclulated based on 4 comma-separated values.  The first is whether inline styles are used. The second is the number of id selectors, the third is the number of classes, attributes, and pseudo-classes, and the fourth is the number of tags and pseudo-elements. A score of 0,1,0,0 which is 1 id and no classes has greater specificity than a score of 0,0,10,10.",
+        "cat": "CSS"
+    },
+    {
+        "question": "What is the difference between normalizing and resetting CSS?",
+        "answer": "Resetting strips all browser default styling on elements while normalizing preserves useful default styling rather than unstyling everything. Normalizing corrects for common cross-browser bugs. Sometimes resetting is helpful when you have a highly customized theme.",
+        "cat": "CSS"
+    },
+    {
+        "question": "What is a promise?",
+        "answer": "A promise is an object that may produce a single value some time in the future. A promise has three states: fulfilled, rejected, or pending. You can attach callbacks to promises to handle fulfilled or rejected states. A promises that is fulfilled or rejected is settled. Promises are also called thenables. You can have more than one than; thens are chainable. A promise is asynchronous.",
+        "cat": "JS"
+    },
+    {
+        "question": "Explain the difference between event capturing and event bubbling",
+        "answer": "Both event capturing and event bubbling are a part of event propagation. Whether or not event capturing is used is determined by the value of the third parameter of the addEventlistener method. If it is true, the event handler is called during the capture phase. If it's false, it's called during the bubbling phase. The capture phase goes from the window down to the event target parent, while bubbling goes from the event target parent up to the window. Some events do not bubble - focus does not bubble.",
+        "cat": "JS"
+    },
+    {
+        "question": "What are the benefits of SVG?",
+        "answer": "It's an efficient file format and can be scaled to any size without losing its sharpness because it is vector based. What I like most about SVGs is that you can apply CSS and JavaScript to the parts of SVGs and there are SVGs specific filters that can do things like blurring.",
+        "cat": "CSS"
+    },
+    {
+        "question": "What is the difference between using a space between selectors in CSS and using the greater than > sign?",
+        "answer": "The space is the descendent selector so if you have div [space] p, that CSS declaration will apply to all paragraphs that are descendents of divs. But if you have div > p, tht applies only to direct children of divs.",
+        "cat": "CSS"
+    },
+    {
+        "question": "What is the purpose of wp_enqueue_script in WordPress?",
+        "answer": "It injects JavaScript files in HTML. WP_enqueue_script says when to load a script, where to load it, and if there are any dependencies. It also allows users to to utilize scripts that are built in, like jQuery, rather than loading it multiple times. ",
+        "cat": "WP"
+    },
+    {
+        "question": "What is the purpose of wp_enqueue_script in WordPress?",
+        "answer": "It injects JavaScript files in HTML. WP_enqueue_script says when to load a script, where to load it, and if there are any dependencies. It also allows users to to utilize scripts that are built in, like jQuery, rather than loading it multiple times. ",
+        "cat": "WP"
+    },
+    {
+        "question": "How do you order your CSS properties?",
+        "answer": "Following Idiomatic CSS rules that address positioning first, then display, visibility, and box model going from the outside in (margin to border to padding), followed by everything else. Sometimes there is a lot of everything else, then group by type: animation and transitions, background, typography, and pseudo-elements and pseudo-classes. If there is inheritance from Sass, like an extend or mixin, that goes first.",
+        "cat": "CSS"
+    },
+    {
+        "question": "What is the difference between div + p and p ~ ul",
+        "answer": "The first one - div + p - selects all of the p elements that are placed immediately after divs. The second one selects all of the uls are are preceded by p elements.",
+        "cat": "CSS"
+    },
+    {
+        "question": "What is the difference between box-sizing: border-box and box-sizing: content-box?",
+        "answer": "Content box gives you default CSS box sizing where the padding and border are added to the final rendered width.  Border-box tells the browser to account for any padding and border in the values specified for height and width. So if you have a div that has a height and width of 100px and padding of 20px and a 1px border, the final rendered height and width would be 100 with border-box and 122 with content-box",
+        "cat": "CSS"
+    },
+    {
+        "question": "How do you create responsive images?",
+        "answer": "Set the file as a background image and set background size to cover. This is best when the image isn't content because you can't set an alt tag on a background image. You can set the width to 100% and the height to auto. If you want the image to scale down but not scale up past its original size set the max-width to 100%. You can also use the source set property to serve up different images at different viewports.  You can also use the picture element with multiple sources that are set based on viewport.",
+        "cat": "CSS"
+    },
+    {
+        "question": "What is asynchronous code?",
+        "answer": "Asynchronous code takes statements out of the normal program flow, allowing the code after it to be called immediately. Times when you want code to run asynchronously include when you're loading data from an API or making an expensive database request - you don't want the user to have to wait until the data loads to view or interact with the page.  Some old-school asynchronous JavaScript is something like setTimeout. And then came Promises with then statements. And now we have asynch and await, which still use Promises and make code more readable.",
+        "cat": "JS"
+    },
+    {
+        "question": "What steps does a browser take to construct a webpage?",
+        "answer": "Begin constructing the DOM by parsing the HTML, request CSS and JS resources, parse the CSS and construct the CSSOM - completing the CSS will unblock the JS engine. Next execute the JS and merge the DOM and the CSSOM into the render tree. Then run layout and paint.",
+        "cat": "Perf"
+    },
+    {
+        "question": "What can you do to make sure that a text input is accessible?",
+        "answer": "Match the for attribute on the label with the name attribute on the input so that there is only one label associated with the input element.  You can also use the aria-labelledby attribute.",
+        "cat": "a11y"
+    },
+    {
+        "question": "What is the difference between webpack and gulp/grunt?",
+        "answer": "Webpack is a module bundler while gulp and grunt are task runners. Wepback allows easier code splitting, control over asset processing, and elimination of dead assets (tree-shaking). It has a lot of features right out of the box but can be hard to configure initially. Gulp is pretty fast and is easy to read. Grunt is sort of outdated and can get really complicated. Both the React and Vue CLIs use webpack.",
+        "cat": "a11y"
+    },
+    {
+        "question": "What is the difference between http and https?",
+        "answer": "The S in HTTPS stands for secure. The data passed between a web server and a browser via http is not encrypted while the data that is passed via HTTPS is encrypted. This involves the use of an SSL certificate. SSL stands for Secure Sockets Layer. It creates the secure encrypted connection. HTTPS is particularly important for sites that pass sensitive data such as e-commerce sites that accept credit card payments or even just sites that require users to login. HTTPS also has SEO benefits as it helps a site post higher in Google rankings.",
+        "cat": "security"
+    },
+    {
+        "question": "What is event delegation?",
+        "answer": "Event delegation is a mechanism of responding to UI events via a single common parent rather than each child. The foundation of event delegation is event bubbling, whereby events trigger any additional event listeners found by following the event target's parent chain upwards all the way to and including the document. Event propagation is particularly helpful when you need to dynamically add new children, such as li's, to a parent, such as a ul. Rather that add event listeners to individual li's, an event listener can be added to the parent ul.  The specific child can still be identified by checking the event object's target property (event.target).",
+        "cat": "JS"
+    }
+]
