@@ -97,7 +97,7 @@
     {
         "question": "What is the difference between webpack and gulp/grunt?",
         "answer": "Webpack is a module bundler while gulp and grunt are task runners. Wepback allows easier code splitting, control over asset processing, and elimination of dead assets (tree-shaking). It has a lot of features right out of the box but can be hard to configure initially. Gulp is pretty fast and is easy to read. Grunt is sort of outdated and can get really complicated. Both the React and Vue CLIs use webpack.",
-        "cat": "a11y"
+        "cat": "tools"
     },
     {
         "question": "What is the difference between http and https?",
